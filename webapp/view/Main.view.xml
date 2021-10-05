@@ -1,0 +1,49 @@
+<mvc:View
+    controllerName="inputvaluehelp.demo.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:ic="inputvaluehelp.demo.control"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}" class="sapUiSizeCompact">
+					<content>
+                        <VBox class="sapUiMediumMargin">
+                            <Label text="{i18n>ODataModel}" />
+                            <Button text="{i18n>Change}" press="changeODataModel" />
+                            <ic:InputValueHelp 
+                                placeholder="{i18n>SelectProduct}"
+                                value="{localModel>/Product}"
+                                showSuggestion="true"
+                                helpModel="ODataModel" 
+                                helpEntitySet="Products" 
+                                helpDescriptionField="ProductName" 
+                                helpKeyField="ProductID" 
+                                dialogTitle="{i18n>dialogTitle}"
+                                width="22rem"
+                            />
+                            <Label text="{i18n>Selected}: {localModel>/Product}" />   
+                            <Label class="sapUiMediumMarginTop" text="{i18n>JSONModel}" />
+                            <Button text="{i18n>Change}" press="changeJSONModel" />
+                            <ic:InputValueHelp 
+                                placeholder="{i18n>SelectPeople}"
+                                value="{localModel>/People}"
+                                showSuggestion="true"
+                                helpModel="JSONModel" 
+                                helpEntitySet="People" 
+                                helpDescriptionField="email" 
+                                helpKeyField="id" 
+                                dialogTitle="{i18n>dialogTitle}"
+                                width="22rem"
+                            />      
+                            <Label text="{i18n>Selected}: {localModel>/People}" />                      
+                        </VBox>
+
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
