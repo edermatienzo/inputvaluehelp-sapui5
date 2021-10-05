@@ -2,7 +2,7 @@
 
 inputvaluehelp-sapui5 is a custom control based on SAPUI5 Input control with extended features like Value Help Dialog and Suggestions, compatible with JSONModel and ODataModel.
 
-![](demo.webm)
+![](screenshot.gif)
 
 ## Installation
 
